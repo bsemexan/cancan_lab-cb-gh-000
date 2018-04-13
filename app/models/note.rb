@@ -15,4 +15,10 @@ class Note < ActiveRecord::Base
     end.compact
   end
 
+  def ensure_owner_can_read
+    if user && !readers.include?(user)
+      readers << user
+    end
+  end
+
 end
