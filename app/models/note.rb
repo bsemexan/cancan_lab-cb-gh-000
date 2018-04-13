@@ -12,4 +12,5 @@ class Note < ActiveRecord::Base
       User.find_by(name: name.strip)
     end.compact
   end
+
 end
