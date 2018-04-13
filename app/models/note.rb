@@ -6,4 +6,6 @@ class Note < ActiveRecord::Base
   def visible_to
     self.readers.map{|reader| reader.name}.join(', ')
   end
+
+  def visible_to=(new_readers)
 end
