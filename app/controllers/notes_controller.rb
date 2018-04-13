@@ -6,6 +6,9 @@ class NotesController < ApplicationController
     redirect_to notes_path
   end
 
+  def update
+  end
+
   def note_params
     params.require(:note).permit(:content, :visible_to)
   end
