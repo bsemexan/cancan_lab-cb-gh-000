@@ -3,7 +3,7 @@ class NotesController < ApplicationController
     note = Note.new(note_params)
     note.user = current_user
     note.save!
-    redirect_to nothes_path
+    redirect_to notes_path
   end
 
   def note_params
