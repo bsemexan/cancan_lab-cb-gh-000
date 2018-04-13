@@ -7,6 +7,8 @@ class NotesController < ApplicationController
   end
 
   def update
+    @note.update(note_params)
+    redirect_to notes_path
   end
 
   def note_params
