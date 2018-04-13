@@ -1,4 +1,4 @@
 class NotesController < ApplicationController
-  def created
+  def create
   end
 end
