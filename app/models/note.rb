@@ -8,4 +8,8 @@ class Note < ActiveRecord::Base
   end
 
   def visible_to=(new_readers)
+    self.readers = new_readers.split(',').map do |name|
+      User.find_by(name: name.strip)
+    end.compact
+  end
 end
